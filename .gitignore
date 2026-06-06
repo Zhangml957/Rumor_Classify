@@ -6,7 +6,9 @@ __pycache__/
 .mypy_cache/
 .venv/
 venv/
-outputs/
+outputs/*
+!outputs/checkpoints/
+!outputs/checkpoints/**
 *.pyc
 *.pyo
 *.pyd
