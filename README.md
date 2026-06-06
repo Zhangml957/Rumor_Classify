@@ -243,4 +243,4 @@ python scripts/evaluate_ensemble.py --config-a configs/bertweet.yaml --config-b 
 
 ## 仓库地址
 
-[SiriThree/Rumor_Classify](https://github.com/SiriThree/Rumor_Classify)
+[Zhangml957/Rumor_Classify](https://github.com/Zhangml957/Rumor_Classify)
