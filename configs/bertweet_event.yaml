@@ -12,8 +12,8 @@ event_name_map:
   6: ottawashooting
 
 data:
-  train_path: rumer2026/train.csv
-  val_path: rumer2026/val.csv
+  train_path: data/train.csv
+  val_path: data/val.csv
   text_column: text
   label_column: label
   id_column: id

@@ -40,7 +40,7 @@
 configs/                 配置文件
 docs/                    系统方案文档
 outputs/                 运行输出、评测结果、分析结果
-rumer2026/               作业数据集
+data/                    作业数据集
 scripts/                 训练、评测、推理、分析、报告生成脚本
 src/rumor_system/        项目源码
 report.docx              大作业报告（Word）

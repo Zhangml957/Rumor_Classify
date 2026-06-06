@@ -4,7 +4,9 @@ import argparse
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from rumor_system.config import load_config
 from rumor_system.pipeline import run_split
@@ -20,7 +22,7 @@ def main() -> None:
     args = parser.parse_args()
 
     config = load_config(args.config)
-    output_dir = apply_timestamped_output_dir(config.raw)
+    output_dir = apply_timestamped_output_dir(config.raw, checkpoint_mode="latest")
     set_global_seed(int(config.raw["project"]["seed"]))
     df = run_split(config, split=args.split)
     output_path = args.output_path or config.output["val_predictions_path"]
