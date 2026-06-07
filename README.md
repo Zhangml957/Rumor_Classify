@@ -19,7 +19,7 @@
   - `official update resolver`
   - `rumor amplification resolver`
   - `safety notice resolver`
-- 判断依据：默认输出为**中文 explanation**
+- 输出支持：默认输出为**中文 explanation**
 
 ## 系统框架
 
@@ -30,7 +30,7 @@
 2. `Hybrid Retrieval`
    - 从训练集检索相似推文作为证据
 3. `Fusion 决策层`
-   - 对高风险样本进行检索增强纠偏
+   - 融合分类结果和检索证据，对高风险样本进行检索增强纠偏
 4. `Explanation 模块`
    - 基于文本信号、相似证据和最终标签输出中文判断依据
 
@@ -144,7 +144,7 @@ python scripts/evaluate.py --config configs/deberta.yaml
 - 当前 `DeBERTa` 在本项目设置下表现不稳定，暂时不作为主线方案
 - 当前最佳结果仍来自 `BERTweet`
 
-### 4. 事件前缀输入实验
+### 4. Event Prefix 输入实验
 
 ```bash
 python scripts/train.py --config configs/bertweet_event.yaml --force-retrain
@@ -156,7 +156,7 @@ python scripts/evaluate.py --config configs/bertweet_event.yaml
 - 我们验证了显式加入 `[event: xxx]` 前缀输入
 - 在当前数据上，该实验未优于稳定主线
 
-### 5. LLM 语义分析实验线
+### 5. LLM Semantic Analyzer 实验线
 
 ```bash
 python scripts/evaluate.py --config configs/bertweet_semantic.yaml
@@ -238,7 +238,6 @@ python scripts/evaluate_ensemble.py --config-a configs/bertweet.yaml --config-b 
 
 本仓库已包含大作业报告：
 
-- [report.docx](./report.docx)
 - [report.pdf](./report.pdf)
 
 ## 仓库地址
