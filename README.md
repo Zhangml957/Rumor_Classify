@@ -237,7 +237,7 @@ python scripts/evaluate_ensemble.py --config-a configs/bertweet.yaml --config-b 
 
 本仓库已包含大作业报告：
 
-- [report.pdf](./report.pdf)
+- [report.pdf](https://github.com/Zhangml957/Rumor_Classify/blob/main/report.pdf)
 
 ## 仓库地址
 
